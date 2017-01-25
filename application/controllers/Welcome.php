@@ -34,4 +34,19 @@ class Welcome extends CI_Controller {
 		//$zecho =$this->registry->dump();
 		//var_dump($zecho);
 	}
+	public function insert()
+	{
+		$icd = "B001";
+		$desc = "B zero one";
+		$data = array(
+			'icd' => $icd,
+			'description' => $desc
+			);
+		$doInsert = $this->registry->insert('registry', $data);
+		if ($doInsert) {
+			echo "SUCCESS!";
+		}else{
+			echo "FAILED!";
+		}
+	}
 }
