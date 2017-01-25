@@ -74,4 +74,5 @@ if(!function_exists('put_headers')){
         return $str;
     }
 }
+//this is added comment
 ?>
