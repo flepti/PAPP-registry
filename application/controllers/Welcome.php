@@ -28,39 +28,10 @@ class Welcome extends CI_Controller {
 	{
 
 		//$this->registry();
-		//$this->load->view('welcome_message');
+        $this->load->view('header');
+		$this->load->view('welcome_message');
 
 		//$zecho =$this->registry->dump();
 		//var_dump($zecho);
-
-		$icd = "A002";
-		$desc = "This is an entry 2 update";
-
-		$data = array(
-			'icd' => $icd,
-			'description' => $desc
-			);
-
-		$updateData = array(
-			'id' => '2',
-			'icd' => $icd,
-			'description' => $desc
-			);
-
-		// $insert = $this->registry->insert('registry', $data);
-		// //var_dump($insert); exit;
-		// if ($insert) {
-		// 	echo "INSERTS SUCCESSFUL!";
-		// }else{
-		// 	echo "FAILED!";
-		// }
-
-		$update = $this->registry->update('registry', $updateData);
-		if ($update) {
-			echo "SUCCESSFUL!";
-		}else{
-			echo "FAILED!";
-		}
-
 	}
 }
