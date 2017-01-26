@@ -1,26 +1,24 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+class Hospitals extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
         $this->load->model('registry');
-        $this->load->library('javascript');
     }
     public function index()
     {
-
-        //$this->registry();
+        redirect();
+    }
+    public function view($var)
+    {
         $this->load->view('header');
         $this->load->view('nav');
-        $this->load->view('welcome_message');
+        $this->load->view('hospital_view.php');
         $this->load->view('footer');
-
-        //$zecho =$this->registry->dump();
-        //var_dump($zecho);
     }
     public function insert()
     {
