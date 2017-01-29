@@ -6,3 +6,4 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url("assets/css/navbar-fixed-top.css"); ?>" rel="stylesheet">
 </head>
+<body style="font-family: candara">

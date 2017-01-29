@@ -25,5 +25,11 @@ class Registry extends CI_Model
             return true;
         }return false;
     }
+    public function search($keyword)
+    {
+        $query = $this->db->query("SELECT icd, description, hospital FROM registry WHERE description like '%$keyword%' or icd = '$keyword'");
+        $data  = $query->result_array();
+        return $data;
+    }
 
 }

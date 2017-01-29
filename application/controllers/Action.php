@@ -37,7 +37,7 @@ class Action extends CI_Controller
         }
     }
 
-    public function createDataTable($definitions = null, $filter = null)
+    public function createDataTable($definitions = null, $data = null, $filter = null)
     {
         $data = $this->registry->dump(@$filter);
         $temp = "<table border = '1'>";
