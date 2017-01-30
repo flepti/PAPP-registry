@@ -1,3 +1,4 @@
+<?php echo base_url(); exit; ?>
 <!DOCTYPE html>
 <html>
 <head>

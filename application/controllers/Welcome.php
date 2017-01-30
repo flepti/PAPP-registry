@@ -27,14 +27,15 @@ class Welcome extends CI_Controller
     
     public function search()
     {
-    	if (!isset(($this->input->post())['registrySearch'])) {
-    		redirect();
-    	}
-        $keyword    = ($this->input->post())['registrySearch'];
+        $postData = $this->input->post();
+        if (!isset($postData['registrySearch'])) {
+            redirect();
+        }
+        $keyword    = $postData['registrySearch'];
         $resultData = $this->registry->search($keyword);
         $match = sizeof($resultData);
         $data       = array(
-        	"match" => $match,
+            "match" => $match,
             "search_result" => $resultData,
         );
         $this->load->view('header');
