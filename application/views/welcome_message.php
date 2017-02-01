@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+
 ?>
 
     <div class="container">
@@ -7,12 +8,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <div class="panel-heading">Manage Database</div>
       <div class="panel-body">
           <span>New Registry Entry</span><hr>
-          <form action="" method="post" enctype="multipart/form-data">
-          <select name="hospital" class="form-control" style="width: 20%;">
-              <option name = "hospital" value="h1">Hospital A</option>
-              <option name = "hospital" value="h2">Hospital B</option>
-          </select><br>
-          <input type="file" name="fileToUpload" id="fileToUpload">
+          <form action="<?php echo site_url();?>/Action/insert" method="post" enctype="multipart/form-data">
+          <!-- <select name="hospital" class="form-control" style="width: 20%;">
+          <?php
+            foreach ($institutions as $hospital) {
+              echo "
+              <option name = 'hospital' value = $hospital>$hospital</option>    ";   
+        }
+          ?>
+          </select><br> -->
+          <input type="file" name="userfile" id="userfile"><br>
+          <input type="submit" name="submit" class="btn btn-info" value="Submit">
           </form>
       </div>
     </div>
@@ -28,25 +34,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
                   <div class="row">
             <div class="col-sm-4">
                 <center>
-                    <a href="<?php echo site_url(); ?>/hospitals/view/h1">
+                    <a href="<?php echo site_url(); ?>/hospitals/view/makatimed">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 1
+                        Makati Medical Center
                     </a>
                 </center>
             </div>
             <div class="col-sm-4">
                 <center>
-                    <a href="#tosomewhere">
+                    <a href="<?php echo site_url(); ?>/hospitals/view/chonghua">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 2
+                        Chong Hua
                     </a>
                 </center>
             </div>
             <div class="col-sm-4">
                 <center>
-                    <a href="#tosomewhere">
+                    <a href="<?php echo site_url(); ?>/hospitals/view/pcmc">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 3
+                        Philippine Children Medical Center
                     </a>
                 </center>
             </div>
@@ -54,9 +60,35 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="row">
             <div class="col-sm-4">
                 <center>
-                    <a href="#tosomewhere">
+                    <a href="<?php echo site_url(); ?>/hospitals/view/phc">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 4
+                        Philippine Heart Center
+                    </a>
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <a href="<?php echo site_url(); ?>/hospitals/view/pgh">
+                        <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
+                        Philippine General Hospital
+                    </a>
+                </center>
+            </div>
+            <div class="col-sm-4">
+                <center>
+                    <a href="<?php echo site_url(); ?>/hospitals/view/stlukes">
+                        <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
+                        St. Lukes Medical Center
+                    </a>
+                </center>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <center>
+                    <a href="<?php echo site_url(); ?>/hospitals/view/usth">
+                        <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
+                        Univernsity of Sto. Tomas Hospital
                     </a>
                 </center>
             </div>
@@ -64,16 +96,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <center>
                     <a href="#tosomewhere">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 5
+                        Others
                     </a>
                 </center>
             </div>
             <div class="col-sm-4">
                 <center>
-                    <a href="#tosomewhere">
+                    <!-- <a href="#tosomewhere">
                         <span class="glyphicon glyphicon-briefcase" style="font-size: 100px; color: #313233"></span><br>
-                        Hospital 6
-                    </a>
+                        St. Lukes Medical Center
+                    </a> --> 
                 </center>
             </div>
         </div>

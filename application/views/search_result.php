@@ -9,7 +9,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		    <thead>
 		      <tr>
 		        <th style="width: 10%; border-color: red">ICD</th>
-		        <th style="border-color: blue;">DIAGNOSIS</th>
+		        <th style="border-color: blue;">CATEGORY</th>
+		        <th style="border-color: blue;">SUB-CATEGORY</th>
+		        <th style="border-color: blue;">DIAGNOSIS</th> 
+		        <th style="border-color: blue;">PATIENT NAME (Initials)</th>
+		        <th style="border-color: blue;">PATIENT BIRTHDAY</th>
 		        <th style="border-color: blue;">HOSPITAL</th>
 		      </tr>
 		    </thead>

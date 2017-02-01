@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo site_url(); ?>">Disease registry</a>
+          <a class="navbar-brand" href="<?php echo site_url(); ?>">Registry of Diseases</a>
           
         </div>
         <div id="navbar" class="navbar-collapse collapse">

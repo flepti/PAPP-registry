@@ -16,9 +16,14 @@ class Welcome extends CI_Controller
     {
 
         //$this->registry();
+        $data = array(
+            'institutions' => array(
+                'Chong Hua', 'Makati Medical Center', 'Philippine Children Medical Center', 'Philippine Heart Center', 'Philippine General Hospital', 'St. Lukes Medical Center', 'Univernsity of Sto. Tomas Hospital', 'Others'
+                ),
+            );
         $this->load->view('header');
         $this->load->view('nav');
-        $this->load->view('welcome_message');
+        $this->load->view('welcome_message', $data);
         $this->load->view('footer');
 
         //$zecho =$this->registry->dump();
